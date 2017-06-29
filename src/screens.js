@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
