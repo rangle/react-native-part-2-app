@@ -7,23 +7,12 @@ import { routeConfig } from './route-config';
 /**
  * AppNavigator
  */
-export const AppNavigator = StackNavigator(routeConfig);
+export const AppNavigator = // ¯\_(ツ)_/¯
 
 
 // Connect AppNavigator to redux
-const App = ({ dispatch, navigator }) => (
-  <AppNavigator
-    navigation={
-      addNavigationHelpers({
-        dispatch: dispatch,
-        state: navigator,
-      })
-    }
-  />
-);
+const App = // ¯\_(ツ)_/¯
 
 
 // Get the navigator state
-const mapStateToProps = (state) => ({ navigator: state.navigator });
-
-export const AppWithNavigationState = connect(mapStateToProps)(App);
+export const AppWithNavigationState = // ¯\_(ツ)_/¯
