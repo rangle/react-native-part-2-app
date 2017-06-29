@@ -1,9 +1,7 @@
 import React from 'react';
 import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
-import { routeConfig } from './route-config';
-
-import { LoginScreen } from './screens';
+import { LoginScreen, MainScreen, ProfileScreen } from './screens';
 
 
 /**
