@@ -1,13 +1,38 @@
 import React from 'react';
-import { addNavigationHelpers, StackNavigator } from 'react-navigation';
+import { Text } from 'react-native';
+import { addNavigationHelpers, StackNavigator, TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
-import { routeConfig } from './route-config';
+import { LoginScreen, MainScreen, ProfileScreen } from './screens';
+
+LoginScreen.navigationOptions = { title: 'Login' };
+MainScreen.navigationOptions = { title: 'Main' };
+ProfileScreen.navigationOptions = { title: 'Profile' };
 
 
 /**
  * AppNavigator
  */
-export const AppNavigator = StackNavigator(routeConfig);
+export const ProfileTab = StackNavigator({
+  Login: { screen: LoginScreen },
+  Profile: { screen: ProfileScreen },
+});
+
+export const AppNavigator = TabNavigator({
+  ProfileTab: {
+    screen: ProfileTab,
+    navigationOptions: {
+      tabBarLabel: 'Profile',
+      tabBarIcon: ({ tintColor, focused }) => <Text>🤷🏽‍♂️</Text>,
+    },
+  },
+  Main: {
+    screen: MainScreen,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+      tabBarIcon: ({ tintColor, focused }) => <Text>🏠</Text>,
+    },
+  },
+});
 
 
 // Connect AppNavigator to redux

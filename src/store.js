@@ -7,7 +7,7 @@ import { AppNavigator } from './app-navigator';
 const initialState = AppNavigator
   .router
   .getStateForAction(
-    AppNavigator.router.getActionForPathAndParams('Login')
+    AppNavigator.router.getActionForPathAndParams('Main')
   );
 
 

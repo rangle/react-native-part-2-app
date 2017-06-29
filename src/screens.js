@@ -20,8 +20,8 @@ export const LoginScreen = ({ navigation }) => (
   <View style={styles.container}>
     <Text style={styles.title}>Login Screen</Text>
     <Button
-      onPress={() => navigation.navigate('Main')}
-      title="Go to Main"
+      onPress={() => navigation.navigate('Profile')}
+      title="Go to Profile"
     />
     <Button
       onPress={() => navigation.goBack()}
@@ -36,8 +36,8 @@ export const MainScreen = ({ navigation }) => (
   <View style={styles.container}>
     <Text style={styles.title}>Main Screen</Text>
     <Button
-      onPress={() => navigation.navigate('Profile')}
-      title="Go to Profile"
+      onPress={() => navigation.navigate('Login')}
+      title="Go to Login"
     />
     <Button
       onPress={() => navigation.goBack()}
